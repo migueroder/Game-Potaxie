@@ -45,7 +45,7 @@ class Game {
 
 class Personaje {
     constructor() {
-        this.x = 50;
+        this.x = 350;
         this.y = 290;
         this.width = 90;
         this.height = 90;
@@ -78,8 +78,9 @@ class Personaje {
     }
 
     saltar() {
+        if (this.saltando) return; // Evita saltos múltiples
         this.saltando = true;
-        let alturaMaxima = this.y - 100;
+        let alturaMaxima = this.y - 200;
         const salto = setInterval(() => {
             if (this.y > alturaMaxima) {
                 this.y -= 10;
@@ -88,7 +89,7 @@ class Personaje {
                 this.caer();
             }
             this.actualizarPosicion();
-        },20);
+        },15);
     }
 
     caer() {
@@ -97,6 +98,7 @@ class Personaje {
                 this.y += 10;
             } else {
                 clearInterval(gravedad);
+                this.saltando = false; // Para poder saltar de nuevo.
             }
             this.actualizarPosicion();
         },20);
@@ -120,7 +122,7 @@ class Personaje {
 class Moneda {
     constructor(imagenSrc) {
         this.x = Math.random() * 700 + 50;
-        this.y = Math.random() * 250 + 50;
+        this.y = Math.random() * 190 + 50;
         this.width = 50;
         this.height = 50;
         this.element = document.createElement("img"); // Creé elemento "img" en lugar de "div".
@@ -148,5 +150,26 @@ const imagenesMonedas = [
   "https://img.icons8.com/?size=96&id=cy0WzlUnunku&format=png",
   "https://img.icons8.com/?size=96&id=wyJ7oMo7IdEZ&format=png",
 ];
+
+const musica = document.getElementById("musica-fondo"); // Creo una variable llamando al ID del HTML.
+const botonMusica = document.getElementById("btn-musica"); // Lo mismo pero con el ID del botón.
+
+// Aquí creo el evento para que al hacer click se reproduzca la música.
+document.addEventListener("click", () => {
+  if (musica.paused) {
+    musica.play();
+  }
+}, { once: true });
+
+// Y aquí creo el evento para pausar o reproducir la música.
+botonMusica.addEventListener("click", () => {
+  if (musica.paused) {
+    musica.play();
+    botonMusica.textContent = "🔈 Música";
+  } else {
+    musica.pause();
+    botonMusica.textContent = "🔇 Silencio";
+  }
+});
 
 const juego = new Game();
