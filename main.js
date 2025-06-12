@@ -33,6 +33,9 @@ class Game {
                 this.monedas.splice(index, 1);
                 this.actualizarPuntuacion(10);
                 coinSound.play(); // Para reproducir el sonido de la moneda.
+            if (this.monedas.length === 0) {
+                this.mostrarPantallaFinal();
+        }
             }
         })
     },100)
@@ -41,6 +44,27 @@ class Game {
     this.puntuacion += puntos;
     this.puntosElement.textContent = `Puntos: ${this.puntuacion}`;
  }
+
+ mostrarPantallaFinal() {
+  const overlay = document.createElement("div");
+  overlay.style.position = "fixed";
+  overlay.style.top = 0;
+  overlay.style.left = 0;
+  overlay.style.width = "100vw";
+  overlay.style.height = "100vh";
+  overlay.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  overlay.style.display = "flex";
+  overlay.style.justifyContent = "center";
+  overlay.style.alignItems = "center";
+
+  const imagen = document.createElement("img");
+  imagen.src = "./Imagenes/puchaina final.png";
+  imagen.style.maxWidth = "80%";
+  imagen.style.maxHeight = "80%";
+
+  overlay.appendChild(imagen);
+  document.body.appendChild(overlay);
+}
 }
 
 class Personaje {
@@ -165,10 +189,10 @@ document.addEventListener("click", () => {
 botonMusica.addEventListener("click", () => {
   if (musica.paused) {
     musica.play();
-    botonMusica.textContent = "🔈 Música";
+    botonMusica.textContent = "⏸️ Dar pause";
   } else {
     musica.pause();
-    botonMusica.textContent = "🔇 Silencio";
+    botonMusica.textContent = "🎵 Dar play";
   }
 });
 

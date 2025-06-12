@@ -41,6 +41,17 @@ body {
     color: rgb(87, 87, 87);
 }
 
+#btn-historia {
+    width: 400px;
+    height: 30px;
+    margin-left: 29%;
+    background-color: whitesmoke;
+    border: grey solid 3px;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
 #imagenes {
     display: flex;
     justify-content: center;
@@ -54,10 +65,21 @@ body {
     margin: 10px;
 }
 
-#btn-toggle {
-    margin-top: 20px 300px 0px 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#btn-game {
+    width: 150px;
+    height: 40px;
     cursor: pointer;
+    margin-top: 7px;
+    margin-left: 47%;
+    background-color: rgb(255, 251, 31);
+    border: rgb(105, 141, 32) solid 4px;
+    border-radius: 10px;
+    box-shadow: 3px 5px 7px rgba(0, 0, 0, 0.473); /* Ejemplo de sombra */
 }
+
+#btn-game a {
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
