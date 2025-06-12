@@ -1,0 +1,63 @@
+body {
+    background-image: url(./Imagenes/shining-pink2.jpg);
+    background-size: 100%;
+}
+
+#game-name h1 {
+    font-family: Oleo Script, sans-serif;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    color: rgb(104, 104, 104)
+}
+
+#game-name h2 {
+    font-family: Oleo Script, sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: rgb(104, 104, 104);
+}
+
+#game-name img {
+    height: 50px;
+    width: 50px;
+    filter: brightness(3);
+}
+
+#historia {
+    font-family:Arial, Helvetica, sans-serif; 
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 260px 0px 260px;
+    color: rgb(87, 87, 87);
+}
+
+#imagenes {
+    display: flex;
+    justify-content: center;
+}
+
+.img-puchaina {
+    width: 20%;
+    height: 20%;
+    border: greenyellow solid 7px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+#btn-toggle {
+    margin-top: 20px 300px 0px 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
