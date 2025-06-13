@@ -43,5 +43,5 @@ Está inspirado en el lore de la cultura potaxie que ha sido muy viral en redes 
 
 ## ✨ Autor
 
-Creado por \[migueroder] como proyecto personal para practicar lógica de programación orientada a objetos y práctica en HTML y CSS.
+Creado por `migueroder` como proyecto personal para practicar lógica de programación orientada a objetos y práctica en HTML y CSS.
 # ¡Gracias por jugar!
