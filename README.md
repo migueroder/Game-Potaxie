@@ -21,8 +21,6 @@ Está inspirado en el lore de la cultura potaxie que ha sido muy viral en redes 
 - ✅ **Pantalla de victoria** al recolectar todos los objetos.
 - ✅ **Música de fondo** con botón para reproducir o pausar.
 
----
-
 ## 🧩 Tecnologías Usadas
 
 - `HTML5`
