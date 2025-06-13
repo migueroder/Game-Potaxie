@@ -15,7 +15,8 @@ body {
 h1 {
   font-family: "Oleo Script", sans-serif;
   font-size: 50px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 5px;
 }
 
 h1 img {
@@ -27,6 +28,14 @@ h1 img {
 h4 {
   margin-top: 0; 
   margin-bottom: 10px;
+}
+
+#instrucciones {
+  display: flex;
+}
+
+#instrucciones p {
+  margin-top: 0;
 }
 
 #btn-musica {
@@ -84,5 +93,5 @@ h4 {
 #puntos {
   font-size: 20px;
   text-align: center;
-  margin: 10px 0;
+  margin: 10px 0 5px 0px;
 }
